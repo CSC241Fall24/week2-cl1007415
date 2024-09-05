@@ -4,6 +4,13 @@ public class Q1WeirdFunction {
 
     public static int fRecursive(int n) {
         // TODO: Implement the recursive function
+         if(n < 3)
+        {
+            return n;
+        }else if(n >= 3)
+        {
+            return fRecursive(n-1) + fRecursive(n-2) + fRecursive(n-3);
+        }
         return 0;
     }
 
