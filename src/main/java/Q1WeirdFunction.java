@@ -16,6 +16,19 @@ public class Q1WeirdFunction {
 
     public static int fIterative(int n) {
         // TODO: Implement the iterative function
-        return 0;
+        if(n < 3)
+        {
+            return n;
+        }
+        
+        int[] f = new int[n + 1];
+        f[0] = 0;
+        f[1] = 1;
+        f[2] = 2;
+        
+        for (int i = 3; i <= n; i++) {
+            f[i] = f[i-1] + 2 * f[i-2] + 3 * f[i-3];
+        }
+        return f[n];
     }
 }
